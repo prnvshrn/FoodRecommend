@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Panel} from 'react-bootstrap';
 
 class Output extends Component{
     constructor(props){
@@ -8,8 +9,14 @@ class Output extends Component{
     render(){
         return(
             <div>
-                {this.props.label}
-                {this.props.url}
+                <Panel>
+                    <Panel.Heading>
+                    {this.props.label}
+                    </Panel.Heading>
+                    <Panel.Body>
+                    <a>{this.props.url}</a>
+                    </Panel.Body>
+                </Panel>
             </div>
         );
     }
